@@ -1,11 +1,30 @@
+/* ================================
+   Global layout fixes
+   ================================ */
+
 /* Push content below the fixed navbar */
 body {
-  padding-top: 70px;
+  padding-top: 95px;   /* desktop navbar height */
 }
 
-/* Main hero section spacing */
+/* Navbar is taller on smaller screens */
+@media (max-width: 992px) {
+  body {
+    padding-top: 110px;
+  }
+}
+
+/* ================================
+   Hero section
+   ================================ */
+
 .hero {
   padding: 20px 0;
+}
+
+/* Remove extra top margin from name */
+.hero h2 {
+  margin-top: 0;
 }
 
 /* Profile image styling */
@@ -14,12 +33,19 @@ body {
   border-radius: 12px;
 }
 
-/* Section headings spacing */
+/* ================================
+   Section styling
+   ================================ */
+
 .section-title {
   margin-top: 18px;
+  font-weight: 600;
 }
 
-/* Link styling */
+/* ================================
+   Link styling
+   ================================ */
+
 a {
   text-decoration: none;
 }
