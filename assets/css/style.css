@@ -1,0 +1,29 @@
+/* Push content below the fixed navbar */
+body {
+  padding-top: 70px;
+}
+
+/* Main hero section spacing */
+.hero {
+  padding: 20px 0;
+}
+
+/* Profile image styling */
+.profile-pic {
+  max-width: 190px;
+  border-radius: 12px;
+}
+
+/* Section headings spacing */
+.section-title {
+  margin-top: 18px;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
