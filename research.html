@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Research | Shreyas Harish</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Shreyas Harish</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="research.html">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- INTRO -->
+    <section class="cardish soft-gradient mb-4">
+      <h3 class="mb-2">Research</h3>
+      <p class="mb-0">
+        My work focuses on <strong>semiconductor device simulation and characterization workflows</strong>
+        using <strong>TCAD Sentaurus</strong> (SDE/SDEVICE/S-Visual) and supporting scripts for analysis and visualization.
+        I’m especially interested in how <strong>materials, interfaces, and quantum effects</strong> shape measurable device behavior.
+      </p>
+      <div class="mt-3">
+        <span class="badge-soft">Sentaurus SDE</span>
+        <span class="badge-soft">Sentaurus Device</span>
+        <span class="badge-soft">S-Visual</span>
+        <span class="badge-soft">Python</span>
+        <span class="badge-soft">I–V / C–V</span>
+        <span class="badge-soft">Optics / EQE</span>
+        <span class="badge-soft">Quantum Wells</span>
+      </div>
+    </section>
+
+    <!-- PROJECT 1: MQW -->
+    <section class="cardish mb-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-5">
+          <!-- upload an image named mqw.jpg (screenshot, band diagram, or structure) -->
+          <img class="research-img" src="assets/img/mqw.jpg" alt="MQW TCAD" onerror="this.style.display='none'">
+          <div class="small-muted mt-2">Optional image: <code>assets/img/mqw.jpg</code></div>
+        </div>
+        <div class="col-md-7">
+          <h5 class="section-title mb-1">Multi-Quantum Well (MQW) TCAD Device Setup</h5>
+          <div class="small-muted mb-2">Sentaurus SDE + SDEVICE · QuantumWell physics</div>
+
+          <p class="mb-2">
+            Built a multi-layer MQW device structure in <strong>Sentaurus SDE</strong> and configured
+            <strong>Sentaurus Device</strong> physics with quantum well activation and hetero-interfaces.
+            Created a repeatable simulation workflow for analyzing band behavior and charge distributions across barriers/wells.
+          </p>
+
+          <ul class="mb-2">
+            <li><strong>Structure:</strong> scripted layered barrier/well regions (multi-well stack).</li>
+            <li><strong>Physics:</strong> enabled <strong>HeteroInterface</strong> and <strong>QuantumWell</strong> models; configured plots for band edges and carrier densities.</li>
+            <li><strong>Outputs:</strong> extracted band diagrams and key variables (conduction/valence band energies, charge, field, densities).</li>
+          </ul>
+
+          <div>
+            <span class="badge-soft">SDE Geometry</span>
+            <span class="badge-soft">QuantumWell</span>
+            <span class="badge-soft">HeteroInterface</span>
+            <span class="badge-soft">Band Diagram</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT 2: Photodetector EQE -->
+    <section class="cardish mb-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-5">
+          <!-- upload a screenshot named eqe.jpg (reflectance/QE plot is perfect) -->
+          <img class="research-img" src="assets/img/eqe.jpg" alt="Photodetector EQE" onerror="this.style.display='none'">
+          <div class="small-muted mt-2">Optional image: <code>assets/img/eqe.jpg</code></div>
+        </div>
+        <div class="col-md-7">
+          <h5 class="section-title mb-1">Photodetector Simulation: Optics + EQE Workflow</h5>
+          <div class="small-muted mb-2">Sentaurus Device Optics · RayTraceBC · S-Visual analysis</div>
+
+          <p class="mb-2">
+            Implemented an optical/electrical simulation workflow for a photodetector, including optical generation
+            and post-processing to compute <strong>reflectance spectra</strong>, <strong>particle flux</strong>, and <strong>QE/SR</strong>.
+          </p>
+
+          <ul class="mb-2">
+            <li><strong>Optics setup:</strong> configured <strong>OpticalGeneration</strong> with monochromatic excitation and wavelength sweeps.</li>
+            <li><strong>Boundary conditions:</strong> used <strong>RayTraceBC</strong> reflectivity conditions to model optical interactions.</li>
+            <li><strong>Visualization:</strong> S-Visual scripts for reflectance, flux, zero-bias QE, and responsivity.</li>
+          </ul>
+
+          <div>
+            <span class="badge-soft">OpticalGeneration</span>
+            <span class="badge-soft">Ray Tracing</span>
+            <span class="badge-soft">QE / SR</span>
+            <span class="badge-soft">S-Visual</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT 3: Bandgap / PMI model -->
+    <section class="cardish mb-4">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-5">
+          <!-- upload a plot screenshot named bandgap.jpg (IV curve / model comparison) -->
+          <img class="research-img" src="assets/img/bandgap.jpg" alt="Bandgap / PMI model" onerror="this.style.display='none'">
+          <div class="small-muted mt-2">Optional image: <code>assets/img/bandgap.jpg</code></div>
+        </div>
+        <div class="col-md-7">
+          <h5 class="section-title mb-1">Bandgap / PMI Parameter Study + I-V Plotting</h5>
+          <div class="small-muted mb-2">Sentaurus Device · Bandgap models · S-Visual plotting</div>
+
+          <p class="mb-2">
+            Created a parameterized bandgap model configuration and simulated a diode structure to study how
+            bandgap settings influence <strong>intrinsic density</strong>, recombination behavior, and I-V response.
+          </p>
+
+          <ul class="mb-2">
+            <li><strong>Modeling:</strong> parameterized bandgap terms and configured device physics (recombination, mobility, intrinsic density).</li>
+            <li><strong>Solves:</strong> Poisson + coupled carrier solves for steady-state electrical behavior.</li>
+            <li><strong>Post-processing:</strong> generated I-V curves using S-Visual scripts.</li>
+          </ul>
+
+          <div>
+            <span class="badge-soft">Bandgap Models</span>
+            <span class="badge-soft">I-V Curves</span>
+            <span class="badge-soft">Recombination</span>
+            <span class="badge-soft">Mobility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT 4: Visualization scripts -->
+    <section class="cardish mb-4">
+      <h5 class="section-title mb-1">Visualization & Analysis Automation</h5>
+      <div class="small-muted mb-2">S-Visual + Python/Pandas</div>
+
+      <p class="mb-2">
+        Built scripts to automate plotting of device variables and band diagrams from simulation outputs (TDR/CSV),
+        including cutline extraction and clean publication-style plots.
+      </p>
+
+      <ul class="mb-0">
+        <li>Generated <strong>energy band diagrams</strong> by extracting 1D cutlines from TDR datasets.</li>
+        <li>Loaded CSV exports with <strong>Pandas</strong>, computed derived quantities (e.g., bandgap), and created S-Visual variables for plotting.</li>
+      </ul>
+    </section>
+
+    <footer class="py-4 text-muted">
+      <small>© <span id="year"></span> Shreyas Harish</small>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
