@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Research | Semiconductor TCAD</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .stack { display:grid; gap:16px; }
+    .section-card{ background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:18px; padding:16px; }
+    .img-full{ width:100%; max-height:420px; object-fit:contain; border-radius:14px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.10); margin-top:10px; }
+    .sub{ color: rgba(255,255,255,0.72); font-weight:600; margin:0 0 10px; }
+    .title2{ margin:0 0 6px; font-size:1.25rem; font-weight:900; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Shreyas Harish</a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Bio</a>
+        <a class="nav-link active" href="research.html">Research</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="teaching.html">Teaching</a>
+      </nav>
+      <div class="top-actions"><button class="icon-btn" aria-label="Theme">☾</button></div>
+    </div>
+  </header>
+
+  <main class="hero-bg">
+    <div class="container">
+
+      <section class="about-card">
+        <h2 class="heading">Semiconductor Device Simulation & Characterization (TCAD)</h2>
+        <p class="about-text">
+          Undergraduate research using <strong>Synopsys Sentaurus</strong> to build device structures,
+          configure physics, run simulations, and interpret electrical/optical behavior through post-processing.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="research.html">← Back to Research Overview</a>
+        </div>
+      </section>
+
+      <section class="about-card" style="margin-top:16px;">
+        <div class="stack">
+
+          <div class="section-card">
+            <h3 class="title2">Multi-Quantum Well (MQW) TCAD Setup</h3>
+            <p class="sub">Sentaurus SDE + Sentaurus Device</p>
+            <img class="img-full" src="assets/img/mqw.jpg" alt="MQW" onerror="this.style.display='none'">
+            <ul class="list" style="margin-top:10px;">
+              <li>Constructed layered well/barrier geometries using <strong>Sentaurus SDE</strong>.</li>
+              <li>Enabled <strong>HeteroInterface</strong> and <strong>QuantumWell</strong> models in <strong>SDEVICE</strong>.</li>
+              <li>Analyzed band edges, carrier density, and electric-field trends across interfaces.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3 class="title2">Photodetector Simulation (Optics + EQE)</h3>
+            <p class="sub">OpticalGeneration · RayTraceBC · Sentaurus Visual</p>
+            <img class="img-full" src="assets/img/eqe.jpg" alt="EQE" onerror="this.style.display='none'">
+            <ul class="list" style="margin-top:10px;">
+              <li>Configured <strong>OpticalGeneration</strong> and wavelength sweeps in Sentaurus Device.</li>
+              <li>Applied <strong>RayTraceBC</strong> boundary conditions for reflectance/absorption effects.</li>
+              <li>Post-processed results in <strong>Sentaurus Visual</strong> to visualize <strong>QE</strong> and responsivity trends.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3 class="title2">Bandgap / Model Parameter Studies (I–V)</h3>
+            <p class="sub">Device physics exploration + I–V analysis</p>
+            <img class="img-full" src="assets/img/bandgap.jpg" alt="Bandgap/I-V" onerror="this.style.display='none'">
+            <ul class="list" style="margin-top:10px;">
+              <li>Configured bandgap and recombination-related parameters in <strong>Sentaurus Device</strong>.</li>
+              <li>Solved coupled Poisson and carrier transport equations for steady-state response.</li>
+              <li>Generated and analyzed <strong>I–V characteristics</strong> using <strong>Sentaurus Visual</strong>.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3 class="title2">Visualization & LabVIEW</h3>
+            <p class="sub">Clear plots + reproducible analysis</p>
+            <ul class="list">
+              <li>Extracted cutlines/band diagrams and key device variables using <strong>Sentaurus Visual</strong>.</li>
+              <li>Processed exported data with <strong>Python</strong> (Pandas/Matplotlib) for clean plots.</li>
+              <li>Used <strong>LabVIEW</strong> for data visualization/analysis workflows supporting interpretation of datasets.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="footer">© <span id="year"></span> Shreyas Harish</footer>
+    </div>
+  </main>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
