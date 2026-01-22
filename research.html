@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Research | Shreyas Harish</title>
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- small page-specific tweaks (keeps everything stacked + readable) -->
+  <style>
+    .stack { display: grid; gap: 16px; }
+    .section-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 16px; }
+    .section-title2 { margin: 0 0 6px; font-size: 1.25rem; font-weight: 900; }
+    .section-sub { margin: 0 0 12px; color: rgba(255,255,255,0.72); font-weight: 600; }
+    .img-full { width: 100%; max-height: 420px; object-fit: contain; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); }
+    .tight { margin-top: 10px; }
+    .tools-row { display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
+  </style>
 </head>
 
 <body>
@@ -27,84 +38,95 @@
   <main class="hero-bg">
     <div class="container">
 
+      <!-- PAGE HEADER -->
       <section class="about-card">
         <h2 class="heading">Research</h2>
         <p class="about-text">
           I am an <strong>undergraduate researcher</strong> interested in how semiconductor materials, interfaces,
           and device structures translate into measurable electrical/optical behavior. My work includes
           <strong>TCAD simulation workflows</strong> (Synopsys Sentaurus SDE/SDEVICE), post-processing with
-          <strong>Sentaurus Visual</strong>, analysis with <strong>Python</strong>, and Lab-based data visualization
+          <strong>Sentaurus Visual</strong>, analysis with <strong>Python</strong>, and lab-based data visualization
           using <strong>LabVIEW</strong>.
         </p>
 
-        <div class="cta-row">
-          <span class="btn btn-ghost">Tools: Sentaurus · Sentaurus Visual · Python · LabVIEW</span>
+        <div class="tools-row">
+          <span class="btn btn-ghost">Sentaurus SDE</span>
+          <span class="btn btn-ghost">Sentaurus Device</span>
+          <span class="btn btn-ghost">Sentaurus Visual</span>
+          <span class="btn btn-ghost">Python</span>
+          <span class="btn btn-ghost">LabVIEW</span>
+          <span class="btn btn-ghost">I–V / C–V</span>
+          <span class="btn btn-ghost">Optics / EQE</span>
         </div>
+      </section>
 
-        <div class="split-row">
+      <!-- STACKED SECTIONS -->
+      <section class="about-card" style="margin-top:16px;">
+        <h3 class="mini-title" style="margin:0 0 8px;">Semiconductor Device Simulation & Characterization (TCAD)</h3>
+        <p class="small-muted" style="margin:0 0 12px;">
+          One research theme, organized into clear sub-areas below.
+        </p>
+
+        <div class="stack">
 
           <!-- MQW -->
-          <div class="mini-card">
-            <h3 class="mini-title">Multi-Quantum Well (MQW) TCAD Setup</h3>
-            <p class="small-muted" style="margin-top:-4px;">Sentaurus SDE + Sentaurus Device</p>
+          <div class="section-card">
+            <h4 class="section-title2">Multi-Quantum Well (MQW) TCAD Setup</h4>
+            <p class="section-sub">Sentaurus SDE + Sentaurus Device</p>
 
-            <img class="research-img" src="assets/img/mqw.jpg" alt="MQW" onerror="this.style.display='none'">
-            <p class="small-muted" style="margin:10px 0 0;">Optional image: <code>assets/img/mqw.jpg</code></p>
+            <img class="img-full" src="assets/img/mqw.jpg" alt="MQW TCAD"
+                 onerror="this.style.display='none'">
 
-            <ul class="list" style="margin-top:10px;">
+            <ul class="list tight">
               <li>Built layered well/barrier geometries using <strong>Sentaurus SDE</strong>.</li>
               <li>Enabled <strong>HeteroInterface</strong> / <strong>QuantumWell</strong> models in <strong>SDEVICE</strong>.</li>
               <li>Analyzed band edges, carrier density, and electric-field trends across interfaces.</li>
             </ul>
           </div>
 
-          <!-- Photodetector -->
-          <div class="mini-card">
-            <h3 class="mini-title">Photodetector Simulation (Optics + EQE)</h3>
-            <p class="small-muted" style="margin-top:-4px;">OpticalGeneration · RayTraceBC · Post-processing</p>
+          <!-- Photodetector EQE -->
+          <div class="section-card">
+            <h4 class="section-title2">Photodetector Simulation (Optics + EQE)</h4>
+            <p class="section-sub">OpticalGeneration · RayTraceBC · Post-processing</p>
 
-            <img class="research-img" src="assets/img/eqe.jpg" alt="EQE" onerror="this.style.display='none'">
-            <p class="small-muted" style="margin:10px 0 0;">Optional image: <code>assets/img/eqe.jpg</code></p>
+            <img class="img-full" src="assets/img/eqe.jpg" alt="Photodetector EQE"
+                 onerror="this.style.display='none'">
 
-            <ul class="list" style="margin-top:10px;">
+            <ul class="list tight">
               <li>Configured <strong>OpticalGeneration</strong> and wavelength sweeps in Sentaurus Device.</li>
               <li>Applied <strong>RayTraceBC</strong> boundary conditions for reflectance/absorption effects.</li>
               <li>Used <strong>Sentaurus Visual</strong> to compute/visualize <strong>QE</strong> and responsivity trends.</li>
             </ul>
           </div>
 
-        </div>
+          <!-- Bandgap -->
+          <div class="section-card">
+            <h4 class="section-title2">Bandgap / Model Parameter Studies (I–V)</h4>
+            <p class="section-sub">Device physics exploration + I–V analysis</p>
 
-        <div class="split-row" style="margin-top:16px;">
+            <img class="img-full" src="assets/img/bandgap.jpg" alt="Bandgap / I-V"
+                 onerror="this.style.display='none'">
 
-          <!-- Bandgap study -->
-          <div class="mini-card">
-            <h3 class="mini-title">Bandgap / Model Parameter Studies (I–V)</h3>
-            <p class="small-muted" style="margin-top:-4px;">Device physics exploration + I–V analysis</p>
-
-            <img class="research-img" src="assets/img/bandgap.jpg" alt="I-V" onerror="this.style.display='none'">
-            <p class="small-muted" style="margin:10px 0 0;">Optional image: <code>assets/img/bandgap.jpg</code></p>
-
-            <ul class="list" style="margin-top:10px;">
+            <ul class="list tight">
               <li>Configured bandgap and recombination-related parameters in <strong>Sentaurus Device</strong>.</li>
-              <li>Solved Poisson + carrier transport for steady-state device response.</li>
-              <li>Generated and analyzed <strong>I–V curves</strong> in <strong>Sentaurus Visual</strong>.</li>
+              <li>Solved coupled Poisson and carrier transport equations for steady-state response.</li>
+              <li>Generated and analyzed <strong>I–V characteristics</strong> using <strong>Sentaurus Visual</strong>.</li>
             </ul>
           </div>
 
           <!-- Visualization -->
-          <div class="mini-card">
-            <h3 class="mini-title">Visualization & LabVIEW</h3>
-            <p class="small-muted" style="margin-top:-4px;">Clear plots + reproducible analysis</p>
+          <div class="section-card">
+            <h4 class="section-title2">Visualization & LabVIEW</h4>
+            <p class="section-sub">Clear plots + reproducible analysis</p>
 
-            <ul class="list" style="margin-top:10px;">
+            <ul class="list">
               <li>Extracted cutlines/band diagrams and key device variables using <strong>Sentaurus Visual</strong>.</li>
               <li>Processed exported data with <strong>Python</strong> (Pandas/Matplotlib) for clean plots.</li>
               <li>Used <strong>LabVIEW</strong> for data visualization/analysis workflows supporting interpretation of datasets.</li>
             </ul>
 
             <div style="margin-top:12px;">
-              <span class="btn btn-ghost">Undergrad-friendly focus: learn → simulate → analyze → communicate</span>
+              <span class="btn btn-ghost">Undergrad focus: learn → simulate → analyze → communicate</span>
             </div>
           </div>
 
