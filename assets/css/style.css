@@ -1,29 +1,85 @@
-/* Push content below the fixed navbar */
+/* Layout: avoid navbar overlap */
 body { padding-top: 95px; }
 @media (max-width: 992px) { body { padding-top: 110px; } }
 
-/* Typography / spacing */
-.hero { padding: 22px 0; }
-.section-title { margin-top: 0; font-weight: 700; }
+/* Typography */
+:root{
+  --card-radius: 18px;
+  --shadow: 0 14px 30px rgba(0,0,0,0.10);
+  --border: 1px solid rgba(0,0,0,0.08);
+}
 
-/* Profile image */
-.profile-pic { max-width: 190px; border-radius: 16px; }
+.section-title{
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
 
-/* Colorful card styling (still professional) */
-.hero-card,
-.cardish {
+.small-muted { color: rgba(0,0,0,0.60); }
+
+/* Hero */
+.hero-wrap{
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: var(--border);
+}
+
+.hero-banner{
+  height: 170px;
+  background: linear-gradient(135deg, rgba(13,110,253,0.18), rgba(32,201,151,0.18));
+  position: relative;
+}
+
+.hero-banner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.hero-content{
+  background: #fff;
   padding: 18px 18px;
-  border-radius: 18px;
+}
+
+.profile-pic{
+  max-width: 170px;
+  border-radius: 16px;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+  margin-top: -60px;
+  background: #fff;
+}
+
+/* Cards */
+.cardish{
+  border-radius: var(--card-radius);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: #fff;
+  padding: 16px 16px;
+}
+
+.soft-gradient{
+  background: linear-gradient(135deg, rgba(13,110,253,0.08), rgba(255,193,7,0.08));
+}
+
+.badge-soft{
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
   border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
-  background: linear-gradient(135deg, rgba(13,110,253,0.10), rgba(32,201,151,0.10));
+  background: rgba(13,110,253,0.08);
+  font-size: 0.85rem;
+  margin: 4px 6px 0 0;
 }
 
-/* Make About/Education slightly different tint */
-.cardish {
-  background: linear-gradient(135deg, rgba(32,201,151,0.10), rgba(255,193,7,0.10));
+.research-img{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
-/* Links */
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
