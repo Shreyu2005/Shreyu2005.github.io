@@ -4,120 +4,127 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Experience | Shreyas Harish</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Page-specific layout tweaks -->
+  <style>
+    .stack { display: grid; gap: 16px; }
+    .section-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .section-title2 {
+      margin: 0 0 4px;
+      font-size: 1.25rem;
+      font-weight: 900;
+    }
+    .section-sub {
+      margin: 0 0 10px;
+      color: rgba(255,255,255,0.72);
+      font-weight: 600;
+    }
+    .tight { margin-top: 8px; }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Shreyas Harish</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-          <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-          <li class="nav-item"><a class="nav-link active" href="experience.html">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-        </ul>
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Shreyas Harish</a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Bio</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <a class="nav-link active" href="experience.html">Experience</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link" href="teaching.html">Teaching</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-btn" title="Theme" aria-label="Theme">☾</button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="container">
+  <main class="hero-bg">
+    <div class="container">
 
-    <section class="cardish soft-gradient mb-4">
-      <h3 class="mb-2">Experience</h3>
-      <p class="mb-0">
-        Roles spanning semiconductor research, mapping/optimization, teaching support, and applied AI security testing.
-      </p>
-    </section>
+      <!-- PAGE HEADER -->
+      <section class="about-card">
+        <h2 class="heading">Experience</h2>
+        <p class="about-text">
+          Hands-on experience across semiconductor simulation research, geospatial optimization tools,
+          teaching support, and applied security testing. Roles emphasize problem-solving,
+          analysis, and clear technical communication.
+        </p>
+      </section>
 
-    <!-- Research Assistant Intern -->
-    <section class="cardish mb-4">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4">
-          <img class="research-img" src="assets/img/heterostructures.jpg" alt="Heterostructures" onerror="this.style.display='none'">
-          <div class="small-muted mt-2">Optional: assets/img/heterostructures.jpg</div>
-        </div>
-        <div class="col-md-8">
-          <h5 class="section-title mb-1">Research Assistant Intern — VCU College of Engineering</h5>
-          <div class="small-muted mb-2">Richmond, VA · Feb 2025 – Nov 2025</div>
-          <ul class="mb-0">
-            <li>Researched semiconductor heterostructures with focus on material behavior, device interfaces, and electrical performance.</li>
-            <li>Supported device modeling: carrier transport analysis, doping effects, and band-structure simulation.</li>
-            <li>Performed I–V and C–V characterization to evaluate behavior, reliability, and performance trends.</li>
-            <li>Designed mechanical CAD fixtures (Autodesk Inventor) for holders, probe alignment, and measurement setups.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      <!-- STACKED EXPERIENCE -->
+      <section class="about-card" style="margin-top:16px;">
+        <div class="stack">
 
-    <!-- Engineering Fellowship Intern (GCP / GDOP) -->
-    <section class="cardish mb-4">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4">
-          <img class="research-img" src="assets/img/gcp.jpg" alt="GCP / Mapping" onerror="this.style.display='none'">
-          <div class="small-muted mt-2">Optional: assets/img/gcp.jpg</div>
-        </div>
-        <div class="col-md-8">
-          <h5 class="section-title mb-1">Engineering Fellowship Intern — VCU Undergraduate Research</h5>
-          <div class="small-muted mb-2">Richmond, VA · May 2025 – Aug 2025</div>
-          <ul class="mb-0">
-            <li>Built a predictive GCP planning tool using GDOP-based accuracy modeling to optimize GCP quantity and placement for drone mapping.</li>
-            <li>Integrated flight parameters, camera geometry, and terrain DEM data to generate ArcGIS-ready outputs (KML, shapefiles, feature layers).</li>
-            <li>Implemented iterative optimization algorithms to reduce field survey requirements and improve mapping accuracy across varied terrain.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+          <!-- SEMICONDUCTOR RESEARCH -->
+          <div class="section-card">
+            <h3 class="section-title2">Undergraduate Research Assistant — Semiconductor TCAD</h3>
+            <p class="section-sub">Virginia Commonwealth University · Feb 2025 – Nov 2025</p>
 
-    <!-- Teaching Assistant -->
-    <section class="cardish mb-4">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4">
-          <img class="research-img" src="assets/img/ta.jpg" alt="Teaching Assistant" onerror="this.style.display='none'">
-          <div class="small-muted mt-2">Optional: assets/img/ta.jpg</div>
-        </div>
-        <div class="col-md-8">
-          <h5 class="section-title mb-1">Teaching Assistant — Semiconductor / Circuit Labs (VCU Engineering)</h5>
-          <div class="small-muted mb-2">Richmond, VA · Aug 2024 – Present</div>
-          <ul class="mb-0">
-            <li>Guided students through building and debugging circuits using oscilloscopes, power supplies, and structured troubleshooting.</li>
-            <li>Reinforced semiconductor and circuit concepts through hands-on lab support: testing, measurement, and validation.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+            <ul class="list tight">
+              <li>Conducted undergraduate research on semiconductor heterostructures and interface-driven device behavior.</li>
+              <li>Developed TCAD simulation workflows using <strong>Synopsys Sentaurus SDE</strong> and <strong>Sentaurus Device</strong>.</li>
+              <li>Analyzed band diagrams, carrier density, electric fields, and I–V/C–V characteristics.</li>
+              <li>Post-processed simulation outputs using <strong>Sentaurus Visual</strong>, <strong>Python</strong>, and <strong>LabVIEW</strong>.</li>
+              <li>Strengthened understanding of device physics through parameter studies and comparative analysis.</li>
+            </ul>
+          </div>
 
-    <!-- AI Security Intern -->
-    <section class="cardish mb-4">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-4">
-          <img class="research-img" src="assets/img/ai_security.jpg" alt="AI Security" onerror="this.style.display='none'">
-          <div class="small-muted mt-2">Optional: assets/img/ai_security.jpg</div>
-        </div>
-        <div class="col-md-8">
-          <h5 class="section-title mb-1">Artificial Intelligence (AI) Security Intern — VCU Project</h5>
-          <div class="small-muted mb-2">Richmond, VA · Aug 2024 – Jan 2025</div>
-          <ul class="mb-0">
-            <li>Implemented brute-force attack and password hacking methods to study cybersecurity vulnerabilities and defenses.</li>
-            <li>Performed adversarial testing with Flipper Zero and custom Python tools focused on inference manipulation and data integrity.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+          <!-- GCP / GDOP TOOL -->
+          <div class="section-card">
+            <h3 class="section-title2">Engineering Fellowship Intern — GCP Optimization Tool</h3>
+            <p class="section-sub">VCU Undergraduate Research · May 2025 – Aug 2025</p>
 
-    <footer class="py-4 text-muted">
-      <small>© <span id="year"></span> Shreyas Harish</small>
-    </footer>
+            <ul class="list tight">
+              <li>Developed a predictive tool to optimize Ground Control Point (GCP) quantity and placement.</li>
+              <li>Applied <strong>GDOP-based accuracy modeling</strong> to balance spatial accuracy and field effort.</li>
+              <li>Generated ArcGIS-compatible outputs (KML, shapefiles, feature layers).</li>
+              <li>Integrated terrain data and mission constraints to support real-world survey planning.</li>
+              <li>Reduced field survey requirements while maintaining mapping accuracy.</li>
+            </ul>
+          </div>
+
+          <!-- TEACHING ASSISTANT -->
+          <div class="section-card">
+            <h3 class="section-title2">Teaching Assistant — Engineering Laboratories</h3>
+            <p class="section-sub">VCU College of Engineering · Aug 2024 – Present</p>
+
+            <ul class="list tight">
+              <li>Supported undergraduate students in electrical and semiconductor-focused laboratory courses.</li>
+              <li>Assisted with circuit measurements, debugging, and validation using lab instrumentation.</li>
+              <li>Reinforced theoretical concepts through hands-on guidance and structured problem-solving.</li>
+              <li>Helped students develop confidence in experimental setup and data interpretation.</li>
+            </ul>
+          </div>
+
+          <!-- AI SECURITY -->
+          <div class="section-card">
+            <h3 class="section-title2">AI Security Intern — Applied Vulnerability Testing</h3>
+            <p class="section-sub">VCU Project · Aug 2024 – Jan 2025</p>
+
+            <ul class="list tight">
+              <li>Performed applied security testing to evaluate system vulnerabilities and defense mechanisms.</li>
+              <li>Implemented brute-force and password-attack workflows using <strong>Python</strong>.</li>
+              <li>Conducted adversarial testing using <strong>Flipper Zero</strong> and custom scripts.</li>
+              <li>Documented testing procedures and results to support repeatable evaluation.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="footer">© <span id="year"></span> Shreyas Harish</footer>
+    </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
